@@ -1,7 +1,7 @@
  server:
     port: 8081
-
-  spring:
+    
+ spring:
     data:
     #ya se que expuse la password aca pero es para test
       mongodb:
