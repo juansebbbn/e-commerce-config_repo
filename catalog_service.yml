@@ -1,24 +1,22 @@
- server:
-    port: 8081
-    
- spring:
-    data:
-    #ya se que expuse la password aca pero es para test
-      mongodb:
-        uri: mongodb://root:password@localhost:27017/catalogo?authSource=admin
-      elasticsearch:
-        uris: http://localhost:9200
+server:
+  port: 8081
 
-    jpa:
-      hibernate:
-        ddl-auto: update
+spring: 
+  data:
+    mongodb:
+      uri: mongodb://root:password@localhost:27017/catalogo?authSource=admin
+    elasticsearch:
+      uris: http://localhost:9200
+  jpa: 
+    hibernate:
+      ddl-auto: update
 
-  eureka:
-    client:
-      serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
-      register-with-eureka: true
-      fetch-registry: true
-    instance:
-      prefer-ip-address: true
-      hostname: localhost
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
